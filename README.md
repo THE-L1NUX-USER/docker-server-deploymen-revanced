@@ -11,7 +11,7 @@ The app archive is listed [here](https://app.vo1d.cf/)
 
 Special thanks to [@reisxd](https://github.com/reisxd) and [@revanced](https://github.com/revanced)
 
-### Commands to run in docker 
+### Commands to run docker 
 
 docker pull vo1dbin/revanced:3.4.5
 
