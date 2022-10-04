@@ -1,0 +1,25 @@
+version: '3'
+services:
+    revanced-builder:
+        container_name: revanced-builder
+        restart: always
+        build:
+            context: ./
+            dockerfile: Dockerfile
+        image: vo1dbin/revanced:3.4.15
+        depends_on:
+            - pyhttp
+        volumes:
+            - ./revanced/:/app/revanced-builder/revanced/
+        ports:
+            - 8888:8000
+
+    pyhttp:
+        container_name: pyhttpserver
+        restart: always
+        image: vo1dbin/pyhttpserver:latest
+        volumes:
+            - ./revanced/:/server/
+        ports:
+            - 7777:8000
+        
